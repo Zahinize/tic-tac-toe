@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>    
+  </head>
+  <body>
+    <div class="wrapper h-100-min bg-primary d-flex d-column d-y-center">
+      <header class="header d-flex d-x-center d-y-center">
+        <h1 class="color-white p-20 font-xl">Tic Tac Toe</h1>
+      </header>
+      <div class="game-wrapper d-flex d-flex-wrap m-t40 br-5 p-20 relative">
+        <div id="tile-1" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-2" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-3" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-4" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-5" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-6" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-7" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-8" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div id="tile-9" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>
+        <div class="popup js-popup br-5 tr-all d-flex d-column d-x-center d-y-center">
+          <div class="popup-text font-xl font-w-b js-popup-text m-b20"></div>
+          <button class="button js-restart-game cr-pointer">Restart Game</button>
+        </div>
+      </div>
+      <div class="d-flex d-x-center m-t40">
+        <div class="label-wrapper m-r40 d-flex d-column">
+          <div class="label-counter d-flex d-x-center d-y-center font-xl js-x-wins">0</div>
+          <div class="label-user label-user-x d-flex d-x-center d-y-center">X</div>
+        </div>
+        <div class="label-wrapper m-r40 d-flex d-column">
+          <div class="label-counter d-flex d-x-center d-y-center font-xl js-o-wins">0</div>
+          <div class="label-user label-user-o d-flex d-x-center d-y-center">O</div>
+        </div>
+        <div class="label-wrapper m-r40 d-flex d-column">
+          <div class="label-counter d-flex d-x-center d-y-center font-xl js-game-ties">0</div>
+          <div class="label-user label-user-tie d-flex d-x-center d-y-center">Tie</div>
+        </div>
+      </div>
+      <div class="d-flex alert p-10 br-5 bg-white tr-all js-alert">
+        <strong class="font-w-b alert-text js-alert-text"></strong>
+        <span class="alert-close d-flex d-x-center d-y-center bg-white cr-pointer br-round js-alert-close">X</span>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
