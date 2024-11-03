@@ -320,13 +320,21 @@ body {
 }
 @media (max-width: 640px) {
   .alert {
-    left: 5%;
-    top: 8%;
+    left: 35%;
+    top: 85%;
   }
   .alert.show {
-    top: 3%;
+    top: 80%;
   }
 }
 /* Extra-Small (xs) screen breakpoint */
 @media (max-width: 576px) {
+  .game-wrapper {
+    height: auto;
+    width: 100%;
+  }
+  .game-tile {
+    height: 120px;
+    width: 30%;
+  }
 }
