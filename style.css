@@ -20,6 +20,11 @@ body {
   --color-tie: #27ae60;
   --color-white: #fff;
 }
+.protest-guerrilla-regular {
+  font-family: "Protest Guerrilla", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .p-0 {
   padding: 0;
 }
