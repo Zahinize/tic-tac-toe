@@ -332,9 +332,6 @@ body {
   .alert.show {
     top: 80%;
   }
-  .h-min {
-    height: 95vh;
-  }
 }
 /* Extra-Small (xs) screen breakpoint */
 @media (max-width: 576px) {
