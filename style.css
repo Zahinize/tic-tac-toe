@@ -134,7 +134,7 @@ body {
   color: var(--color-white);
 }
 .h-100-min {
-  min-height: 100vh;
+  height: 100vh;
 }
 .bg-primary {
   background: #bdc3c7;
@@ -332,9 +332,9 @@ body {
   .alert.show {
     top: 80%;
   }
-  .sm\:h-min {
-    min-height: 80vh;
-  }
+  /* .sm\:h-min {
+    height: 90vh;
+  } */
 }
 /* Extra-Small (xs) screen breakpoint */
 @media (max-width: 576px) {
