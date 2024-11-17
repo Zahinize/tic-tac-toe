@@ -323,6 +323,7 @@ body {
     top: 75%;
   }
 }
+/* Small (sm) screen breakpoint */
 @media (max-width: 640px) {
   .alert {
     left: 35%;
@@ -330,6 +331,9 @@ body {
   }
   .alert.show {
     top: 80%;
+  }
+  .sm\:h-min {
+    min-height: 80vh;
   }
 }
 /* Extra-Small (xs) screen breakpoint */
