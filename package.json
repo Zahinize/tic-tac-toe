@@ -1,0 +1,29 @@
+{
+  "name": "tic-tac-toe",
+  "source": "src/index.html",
+  "version": "1.0.0",
+  "description": "Yet another tic-tac-toe game!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zahinize/tic-tac-toe.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "html5",
+    "game"
+  ],
+  "author": "Zahin Omar Alwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zahinize/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/Zahinize/tic-tac-toe#readme",
+  "devDependencies": {
+    "parcel": "^2.13.0"
+  }
+}

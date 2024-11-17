@@ -28,9 +28,9 @@
   const oColorClassName = "color-o";
   const xText = "X";
   const oText = "O";
-  const xSoundPath = "./assets/player-x-click.mp3";
-  const oSoundPath = "./assets/player-o-click.mp3";
-  const applauseSoundPath = "./assets/applause-cheer.mp3";
+  const xSoundPath = new URL('assets/player-x-click.mp3', import.meta.url);
+  const oSoundPath = new URL('assets/player-o-click.mp3', import.meta.url);
+  const applauseSoundPath = new URL('assets/applause-cheer.mp3', import.meta.url);
   const combinationMap = {
     "1": ["1-2-3", "1-4-7", "1-5-9"],
     "2": ["1-2-3", "2-5-8"],
