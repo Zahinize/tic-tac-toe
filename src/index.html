@@ -11,9 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>    
   </head>
   <body>
-    <div class="wrapper h-min bg-primary d-flex d-column d-y-center">
-      <header class="header d-flex d-x-center d-y-center">
+    <div class="wrapper h-min bg-primary d-flex d-column d-y-center dark-mode js-app-wrapper">
+      <header class="header d-flex d-x-space-between d-y-center">
+        <div class="p-20"></div>
         <h1 class="protest-guerrilla-regular color-white p-20 font-xl">TicTacToe</h1>
+        <div class="mode-change cr-pointer m-r10 js-mode-change">
+          <img width="45" height="45" src="./assets/light-mode.png" title="Switch to Light Mode" class="js-mode-image" />
+        </div>
       </header>
       <div class="game-wrapper d-flex d-flex-wrap m-t40 br-5 p-20 relative">
         <div id="tile-1" class="game-tile js-game-tile relative d-flex d-x-center d-y-center cr-pointer br-5 m-r10 m-b10 tr-all"></div>

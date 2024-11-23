@@ -7,6 +7,8 @@
   let gameTies = 0;
   let isXActive = true;
   let isOActive = false;
+  let isDarkMode = true;
+  const appWrapperEl = document.querySelector(".js-app-wrapper");
   const tileElems = document.querySelectorAll(".js-game-tile");
   const popupEl = document.querySelector(".js-popup");
   const popupTextEl = document.querySelector(".js-popup-text");
@@ -17,6 +19,8 @@
   const alertEl = document.querySelector(".js-alert");
   const alertTextEl = document.querySelector(".js-alert-text");
   const alertCloseEl = document.querySelector(".js-alert-close");
+  const modeChangeEl = document.querySelector(".js-mode-change");
+  const modeImageEl = document.querySelector(".js-mode-image");
   const totalMoves = 9;
   const xHoverClassName = "game-tile-x-hover";
   const oHoverClassName = "game-tile-o-hover";
@@ -25,11 +29,14 @@
   const tieColorClassName = "color-tie";
   const xColorClassName = "color-x";
   const oColorClassName = "color-o";
+  const darkModeClassName = "dark-mode";
   const xText = "X";
   const oText = "O";
   const xSoundPath = new URL('assets/player-x-click.mp3', import.meta.url);
   const oSoundPath = new URL('assets/player-o-click.mp3', import.meta.url);
   const applauseSoundPath = new URL('assets/applause-cheer.mp3', import.meta.url);
+  const darkModeImagePath = new URL('assets/dark-mode.png', import.meta.url);
+  const lightModeImagePath = new URL('assets/light-mode.png', import.meta.url);
   const combinationMap = {
     "1": ["1-2-3", "1-4-7", "1-5-9"],
     "2": ["1-2-3", "2-5-8"],
@@ -227,12 +234,27 @@
     return;
   }
   function setDOMEvents() {
-    restartGameEl.addEventListener('click', () => {
-      initInteraction();
-    }, false);
-    alertCloseEl.addEventListener('click', () => {
-      hidePlayerAlert();
-    });
+    restartGameEl.addEventListener('click', () => initInteraction(), false);
+    alertCloseEl.addEventListener('click', () => hidePlayerAlert(), false);
+    modeChangeEl.addEventListener('click', () => toggleDisplayMode(), false);
+  }
+  function toggleDisplayMode() {
+    if (isDarkMode) {
+      appWrapperEl.classList.remove(darkModeClassName);
+      modeImageEl.setAttribute("width", "40");
+      modeImageEl.setAttribute("height", "40");
+      modeImageEl.setAttribute("title", "Switch to Dark Mode");
+      modeImageEl.src = darkModeImagePath;
+      isDarkMode = !isDarkMode;
+      return;
+    }
+
+    appWrapperEl.classList.add(darkModeClassName);
+    modeImageEl.setAttribute("width", "45");
+    modeImageEl.setAttribute("height", "45");
+    modeImageEl.setAttribute("title", "Switch to Light Mode");
+    modeImageEl.src = lightModeImagePath;
+    isDarkMode = !isDarkMode;
   }
   function initConfetti() {
     const count = 200,

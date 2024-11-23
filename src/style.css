@@ -19,6 +19,9 @@ body {
   --color-o: #d35400;
   --color-tie: #27ae60;
   --color-white: #fff;
+  --bgcolor-white: #bdc3c7;
+  --bgcolor-black: #000;
+  --color-222: #222;
 }
 .protest-guerrilla-regular {
   font-family: "Protest Guerrilla", serif;
@@ -137,7 +140,7 @@ body {
   height: 100vh;
 }
 .bg-primary {
-  background: #bdc3c7;
+  background: var(--bgcolor-white);
 }
 .bg-white {
   background: var(--color-white);
@@ -147,6 +150,16 @@ body {
 }
 .tr-all {
   transition: all .1s ease-in;
+}
+/* Animations */
+@keyframes bounce {
+  70% { transform:translateY(0%); }
+  80% { transform:translateY(-15%); }
+  90% { transform:translateY(0%); }
+  95% { transform:translateY(-7%); }
+  97% { transform:translateY(0%); }
+  99% { transform:translateY(-3%); }
+  100% { transform:translateY(0); }
 }
 /* Button classes */
 .button {
@@ -203,7 +216,7 @@ body {
   height: 520px;
 }
 .game-tile {
-  background: #bdc3c7;
+  background: var(--bgcolor-white);
   color: transparent;
   font-size: 60px;
   height: 150px;
@@ -283,6 +296,8 @@ body {
 }
 /* Alert */
 .alert {
+  /* TODO: Implement this animation on alert message when it's visible. Use JS animate() API instead. */
+  /* animation: bounce 2s ease infinite; */
   opacity: 0;
   position: absolute;
   left: 20%;
@@ -301,6 +316,47 @@ body {
   border: 1px solid #000;
   font-size: 12px;
 }
+/* Dark Mode */
+.dark-mode.bg-primary {
+  background: url(./assets/noise.png) repeat;
+}
+.dark-mode > .header {
+  background: var(--color-222);
+}
+.dark-mode > .game-wrapper {
+  background: #373738;
+  box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2),
+  inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2),
+  0 15px 18px rgba(0, 0, 0, 0.5),
+  0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.dark-mode .game-tile,
+.dark-mode .alert,
+.dark-mode .alert-close,
+.dark-mode .popup-text,
+.dark-mode .button,
+.dark-mode .label-wrapper > .label-counter {
+  background: linear-gradient(to bottom, #2e2e2e 0%, #222222 100%);
+  border: 1px solid #141414;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255,255,255,.2) inset;
+}
+.dark-mode .game-tile.game-tile-x-active {
+  background: var(--color-x);
+}
+.dark-mode .game-tile.game-tile-o-active {
+  background: var(--color-o);
+}
+.dark-mode .popup {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dark-mode .alert-text,
+.dark-mode .alert-close,
+.dark-mode .button,
+.dark-mode .label-wrapper > .label-counter {
+  color: var(--color-white);
+}
+
+/* Media Queries */
 /* Extra-Large (xl) screen breakpoint */
 @media (max-width: 1280px) {
   .alert {
