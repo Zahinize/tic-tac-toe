@@ -58,6 +58,9 @@ body {
 .m-t40 {
   margin-top: 40px;
 }
+.m-r5 {
+  margin-right: 5px;
+}
 .m-r10 {
   margin-right: 10px;
 }
@@ -72,6 +75,9 @@ body {
 }
 .m-b20 {
   margin-bottom: 20px;
+}
+.m-l5 {
+  margin-left: 5px;
 }
 .m-l10 {
   margin-left: 10px;
@@ -136,6 +142,9 @@ body {
 .color-white {
   color: var(--color-white);
 }
+.color-222 {
+  color: var(--color-222);
+}
 .h-min {
   height: 100vh;
 }
@@ -147,6 +156,9 @@ body {
 }
 .cr-pointer {
   cursor: pointer;
+}
+.txt-no-underline {
+  text-decoration: none;
 }
 .tr-all {
   transition: all .1s ease-in;
