@@ -7,7 +7,6 @@
   let gameTies = 0;
   let isXActive = true;
   let isOActive = false;
-  let playerAlertTimeout = null;
   const tileElems = document.querySelectorAll(".js-game-tile");
   const popupEl = document.querySelector(".js-popup");
   const popupTextEl = document.querySelector(".js-popup-text");
@@ -214,6 +213,7 @@
     /** Announce the game is Tied if gameMoves are 9 and no player has won. **/
     if (gameMoves == totalMoves && !combinationsResult.hasPlayerWon) {
       announceResult(combinationsResult, "TIE");
+      return;
     }
     
     if (combinationsResult.hasPlayerWon) {
@@ -285,13 +285,9 @@
   }
   function showPlayerAlert() {
     alertEl.classList.add("show");
-    playerAlertTimeout = setTimeout(() => {
-      hidePlayerAlert();
-    }, 5000);
   }
   function hidePlayerAlert() {
     alertEl.classList.remove("show");
-    clearTimeout(playerAlertTimeout);
   }
   function playAudio(file) {
     const audio = new Audio(file);
