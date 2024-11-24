@@ -146,7 +146,7 @@ body {
   color: var(--color-222);
 }
 .h-min {
-  height: 100vh;
+  min-height: 100vh;
 }
 .bg-primary {
   background: var(--bgcolor-white);
